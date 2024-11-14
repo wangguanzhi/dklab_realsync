@@ -26,7 +26,6 @@ my $SSH_VERBOSE = 0;
 my $MIN_CHANGES_FOR_RSYNC = 10;
 my @SSH_OPTIONS = (
     "-o", "Compression=yes",
-    "-o", "CompressionLevel=9",
     "-o", "ConnectTimeout=3",
     "-o", "ServerAliveInterval=2",
     "-o", "ServerAliveCountMax=4",
@@ -40,7 +39,7 @@ my @RSYNC_OPTIONS = (
 my @RSYNC_WRAPPER = ();
 my @RSYNC_SSH_WRAPPER = ();
 my $REALSYNC_SPEC_FILE = ".realsync";
-my @DEFAULT_EXCLUDE = ($REALSYNC_SPEC_FILE, "CVS", ".git", ".svn", ".hg", ".cache", ".idea", "nbproject", "~*", "*.tmp", "*.pyc", "*.swp");
+my @DEFAULT_EXCLUDE = ($REALSYNC_SPEC_FILE, "CVS", ".git", ".svn", ".hg", ".cache", ".idea", "nbproject", "~*", "*.tmp", "*.pyc", "*.swp", "__pycache__", "*.egg-info");
 
 # Globals.
 my %CONFIG;
